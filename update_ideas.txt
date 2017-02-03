@@ -1,0 +1,4 @@
+
+change signal type from real to complex. Allow phase offsets.
+Include swirling targets (but no 1/R^2 loss, yet)
+add cfar detection system
