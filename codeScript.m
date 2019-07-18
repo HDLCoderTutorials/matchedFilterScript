@@ -24,6 +24,7 @@ pNCode2 = generatePNCode(pNCodeLength);
 pNCode3 = generatePNCode(pNCodeLength);
 
 % Call codeTest with created codes
+
 %{
 figure(1);
 codeTest(C1,C2);
@@ -31,11 +32,11 @@ codeTest(C1,C2);
 figure(4);
 codeTest(C4,C6);
 sgtitle('C4 with C6')
-
+%}
 figure(5);
 codeTest(barkerCode13,flip(barkerCode13));
 sgtitle('BarkerCode13 with its flipped')
-%}
+
 
 figure(7)
 codeTest(pNCode1,pNCode2);
