@@ -10,7 +10,7 @@ for index = 1:numel(code1)
         code1(index) = -1;
     end
 end
-for index = 1:numel(code1)
+for index = 1:numel(code2)
     if(code2(index) ~= 1)
         code2(index) = -1;
     end

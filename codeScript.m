@@ -31,4 +31,7 @@ figure(4);
 codeTest(C4,C6);
 
 figure(5);
-codeTest(barkerCode4,barkerCode4b);
+codeTest(barkerCode13,flip(barkerCode13));
+
+figure(6)
+codeTest(barkerCode2,barkerCode7)
