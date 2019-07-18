@@ -29,9 +29,12 @@ codeTest(C5,C6);
 
 figure(4);
 codeTest(C4,C6);
+sgtitle('C4 with C6')
 
 figure(5);
 codeTest(barkerCode13,flip(barkerCode13));
+sgtitle('BarkerCode13 with its flipped')
 
-figure(6)
+f = figure(6)
 codeTest(barkerCode2,barkerCode7)
+sgtitle('BarkerCode2 with BarkerCode7')
