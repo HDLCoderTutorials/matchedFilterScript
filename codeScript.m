@@ -17,15 +17,16 @@ C4 = [0,0,0,0,1,1,1,1];
 C5 = [0,1,0,1,1,0,1,0];
 C6 = [0,0,1,1,1,1,0,0];
 
+%PN Codes
+pNCodeLength = 100;
+pNCode1 = generatePNCode(pNCodeLength);
+pNCode2 = generatePNCode(pNCodeLength);
+pNCode3 = generatePNCode(pNCodeLength);
+
 % Call codeTest with created codes
+%{
 figure(1);
 codeTest(C1,C2);
-
-figure(2);
-codeTest(C3,C4);
-
-figure(3);
-codeTest(C5,C6);
 
 figure(4);
 codeTest(C4,C6);
@@ -34,7 +35,8 @@ sgtitle('C4 with C6')
 figure(5);
 codeTest(barkerCode13,flip(barkerCode13));
 sgtitle('BarkerCode13 with its flipped')
+%}
 
-f = figure(6)
-codeTest(barkerCode2,barkerCode7)
-sgtitle('BarkerCode2 with BarkerCode7')
+figure(7)
+codeTest(pNCode1,pNCode2);
+sgtitle('PNCode1 with PNCode2');
