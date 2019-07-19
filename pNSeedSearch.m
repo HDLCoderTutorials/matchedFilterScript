@@ -10,16 +10,15 @@ bestSeed = 2;
 bestSeedCorrilation = codeSize;
 codeB = codeA;
 
-seedList = floor([216732,1e6:2e6]);
+seedList = floor([216732,1e0:1e5]);
 % seedList = floor([45562,1e0:1e5]); % for codeSize = 1000
 
 f = waitbar(0,'you are waiting');
-for seedIndex = 1:numel
-    (seedList)
+for seedIndex = 1:numel(seedList)
     testSeed = seedList(seedIndex);
     codeB = generatePNCode(codeSize,testSeed);
     xcorrOutput = xcorr(codeA,codeB);
-    maxXCorr = max(xcorrOutput);
+    maxXCorr = max(abs(xcorrOutput));
     if (maxXCorr < bestSeedCorrilation)
         bestSeed = testSeed;
         bestSeedCorrilation = maxXCorr;
