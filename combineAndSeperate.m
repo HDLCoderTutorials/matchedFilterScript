@@ -14,8 +14,8 @@ rxSignal = addDelayedSignal(rxSignal,pNCodeB,[800,450,59]);
 rxSignal = addDelayedSignal(rxSignal,pNCodeC,200);
 
 %% Create some noise
-noiseAmp = 0;
-noise = (rand(1,rxSignalLength)-0.5)*2*noiseAmp;
+noiseAmp = .5;
+noise = (randn(1,rxSignalLength)-0.5)*2*noiseAmp;
 
 %% Combine the input singal and the noise
 rxSignal = rxSignal + noise;
@@ -26,7 +26,7 @@ figure(2);
 subplot(4,1,2);
 corOutputA = xcorr(rxSignal,pNCodeA);
 plot(corOutputA(rxSignalLength:end));
-title('Code A Cor Output');
+title('Code A Corilation Output');
 
 subplot(4,1,1);
 plot(rxSignal);
@@ -36,10 +36,10 @@ title('raw rxSignal');
 subplot(4,1,3);
 corOutputB = xcorr(rxSignal,pNCodeB);
 plot(corOutputB(rxSignalLength:end));
-title('Code B Cor Output');
+title('Code B Corilation Output');
 
 
 subplot(4,1,4);
 corOutputC = xcorr(rxSignal,pNCodeC);
 plot(corOutputC(rxSignalLength:end));
-title('Code C Cor Output');
+title('Code C Corilation Output');
