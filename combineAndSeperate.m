@@ -27,7 +27,7 @@ figure(2);
 subplot(3,1,2);
 corOutputA = xcorr(rxSignal,pNCodeA);
 plot(corOutputA(rxSignalLength:end));
-title('Code A Corilation Output');
+title('Code A Correlation Output');
 
 subplot(3,1,1);
 plot(rxSignal);
@@ -37,10 +37,10 @@ title('raw rxSignal');
 subplot(3,1,3);
 corOutputB = xcorr(rxSignal,pNCodeB);
 plot(corOutputB(rxSignalLength:end));
-title('Code B Corilation Output');
+title('Code B Correlation Output');
 
 % 
 % subplot(4,1,4);
 % corOutputC = xcorr(rxSignal,pNCodeC);
 % plot(corOutputC(rxSignalLength:end));
-% title('Code C Corilation Output');
+% title('Code C Correlation Output');
